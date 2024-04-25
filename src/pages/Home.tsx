@@ -20,6 +20,8 @@ function Home() {
       const response = await data.json();
       setCars(response.results);
       setTotal(response.total);
+      console.log(currentPage);
+      
     } catch (err) {
       console.log(err);
     }
@@ -30,6 +32,7 @@ function Home() {
   }, []);
 
   function handleChange(e: ChangeEvent<unknown>, count: number) {
+    console.log(e);    
     setCurrentPage(count);
     localStorage.setItem("page", JSON.stringify(count));
   }

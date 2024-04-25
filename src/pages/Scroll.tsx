@@ -34,7 +34,7 @@ async function getData(limit: number, currentPage: number) {
     }
   }, [])
 
-  function scrollHandler(e: Event) {
+  function scrollHandler() {
     const target = document.documentElement;
     if (target.scrollHeight - (target.scrollTop + window.innerHeight) < 100) {
         setFetching(true);
